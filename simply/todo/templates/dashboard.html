@@ -1,0 +1,20 @@
+{% load static %}
+
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/morph/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+</head>
+<body>
+<br>
+<div class="container bg-white shadow-md p-5" style="width:500px;">
+    <h1>Dashboard</h1>
+    <!-- Your dashboard content goes here -->
+    <p>Welcome, {{ user.username }}</p> <!-- Assuming you want to greet the logged-in user -->
+    <br>
+    <a href="{% url 'user-logout' %}" class="btn btn-danger">Logout</a>
+</div>
+<br>
+</body>
+</html>
